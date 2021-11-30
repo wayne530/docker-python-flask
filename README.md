@@ -15,8 +15,8 @@
 
 ## Rebuilding the `app` container
 
-You'll need to rebuild the app container if you modify anything `Dockerfile.app` or `requirements.txt`,
-such as adding new Python dependencies for your all. To do this:
+You'll need to rebuild the app container if you modify anything in `Dockerfile.app` or `requirements.txt`,
+such as adding new Python dependencies. To do this:
 
 1. Stop the running app container: `docker compose stop app`
 2. Rebuild: `docker compose build`
