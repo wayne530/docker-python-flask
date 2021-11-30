@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    init: true
+    depends_on:
+      - db
+    volumes:
+      - .:/project
+    ports:
+      - "5000:5000"
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=pgsql
+      - POSTGRES_PASSWORD=pgsql
+      - POSTGRES_DB=pgsql
